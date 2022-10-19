@@ -1,0 +1,22 @@
+{%extends 'base.html'%}
+{%load static%}
+{%block title%}Confirmation{%endblock%}
+{%block content%}
+<section class="about_section layout_padding">
+    <div class="container text-center">
+
+        <div class="alert " role="alert">           
+            {%for b in booking_datails%}
+            {{b.p_name}}
+            {{b.p_email}}
+            {{b.doc_name}}
+            {{b.p_token}}
+            {%endfor%}
+           <p> Booked successfully.</p>            
+           <p> Your token number is {{customer_data}}</p>
+        </div>
+    
+    </div>
+</section>
+{%endblock%}
+

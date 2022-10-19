@@ -1,0 +1,48 @@
+
+{%extends 'base.html'%}
+{%load static%}
+{%block title%}About{%endblock%}
+{%block content%}
+<!-- about section -->
+
+<section class="about_section layout_padding">
+  <div class="container  ">
+    <div class="row">
+      <div class="col-md-6 ">
+        <div class="img-box">
+          <img src="{%static 'images/about-img.jpg'%}" alt="">
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="detail-box">
+          <div class="heading_container">
+            <h2>
+              About <span>Us</span>
+            </h2>
+          </div>
+          <p>
+            Meeting your health care needs is our priority.
+            At LS Hospital, you and your family get the highest quality medical care in a safe and warm-hearted environment.
+           
+          </p>
+          
+            <a class="btn" type="button" data-bs-toggle="collapse" href="#collapseid" role="button" aria-expanded="false" aria-controls="collapseExample">
+              Know More
+            </a>
+          
+          <div class="collapse" id="collapseid">
+            <p>
+              We bring the expertise of experienced doctors and staff and the most advanced technology to provide you with utmost care and speedy recovery.
+              We are committed to improving health care and treatment through research and educating future health care professionals. 
+            </p>
+          </div>
+          
+          
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- end about section -->
+{%endblock%}
