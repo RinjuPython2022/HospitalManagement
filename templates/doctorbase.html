@@ -27,16 +27,19 @@
         <link href="{% static 'css/responsive.css'%}" rel="stylesheet" />
 
     </head>
-    <body class="sub_page">  
-      <div class="hero_area">
-
+    <body>  
+        <div class="hero_area">
+      
+            <div class="hero_bg_box">
+              <img src="{%static 'images/hero-bg.png'%}" alt="">
+            </div>
        
       
         <!-- header section strats -->
         <header class="header_section">
           <div class="container">
             <nav class="navbar navbar-expand-lg custom_nav-container ">
-              <a class="navbar-brand" href="{%url 'home'%}">
+              <a class="navbar-brand" href="{%url 'homepage'%}">
                 <span>
                  LS Hospital
                 </span>
@@ -48,33 +51,27 @@
     
               <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav">
-                  <li class="nav-item active">
-                    <a class="nav-link" href="{%url 'home'%}">Home <span class="sr-only">(current)</span></a>
+                  <li class="nav-item">
+                    <a class="nav-link" href="{%url 'homepage'%}">Home</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="{%url 'about'%}"> About</a>
+                    <a class="nav-link" href="{%url 'profile'%}">Profile</a>
+                  </li>                 
+                  
+                  <li class="nav-item">
+                    <a class="nav-link" href="{%url 'viewpage'%}">View Appointments</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="{%url 'department'%}">Departments</a>
+                    <a class="nav-link" href="{%url 'logoutpage'%}">Logout</a>
                   </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="{%url 'doctors'%}">Doctors</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="{%url 'loginpage'%}">Login</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="{%url 'register'%}">Register</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="{%url 'contact'%}">Contact Us</a>
-                  </li>
+                  
                   
                 </ul>
               </div>
             </nav>
           </div>
         </header>
+        
         <!-- end header section -->
         
      </div>    

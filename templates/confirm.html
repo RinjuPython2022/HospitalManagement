@@ -1,16 +1,19 @@
-{%extends 'base.html'%}
+{%extends 'patientbase1.html'%}
 {%load static%}
 {%block title%}Confirmation{%endblock%}
 {%block content%}
 <section class="about_section layout_padding">
     <div class="container text-center">
 
-        <div class="alert " role="alert">           
+        <div class="alert " role="alert"> 
+                      
             {%for b in booking_datails%}
-            {{b.p_name}}
-            {{b.p_email}}
-            {{b.doc_name}}
-            {{b.p_token}}
+            <ul>
+            <li>Name:{{b.p_name}}
+            <li>Email:{{b.p_email}}
+            <li>Doctor:{{b.doc_name}}          
+            <li>Token:{{b.p_token}}
+            <ul>
             {%endfor%}
            <p> Booked successfully.</p>            
            <p> Your token number is {{customer_data}}</p>

@@ -1,0 +1,170 @@
+{%extends 'doctorbase1.html'%}
+{%load static%}
+{%block title%}View Appointments{%endblock%}
+{%block content%}
+<section class="booking_section layout_padding">
+  <div id="wrapper"> 
+  
+    <div class="page-content-wrapper">
+      <div class="container-fluid">
+       <h3 class="text-center text-success">Today's Appointments
+          <!--<button class="btn btn-link"  data-toggle="collapse"  data-target="#collapse1"role="button" aria-expanded="false" aria-controls="collapse1">
+            <i class="fa fa-bars">Today's Appointments</i>
+          </button>-->
+        </h3>
+        <div class="text-center" role="" id="accordion-1">
+          <div id="accordion">
+            <div class="card">
+              {%for d in today_booking_datails %}
+              <div class="card-header collapsible-header" id="collapse1">
+                <h5 style="color:blue;">
+                  <button class="btn btn-link" data-toggle="collapse" data-target="#collapseOne"  role="button" aria-expanded="false" aria-controls="collapseOne">
+                    <i class="fa fa-calendar-check-o"></i>{{d.p_name}} have appointment with {{d.doc_name}} 
+                  </button></h5>
+              </div>
+          
+              <div id="collapseOne" class="collapse" aria-labelledby="collapse1" data-parent="#accordion">
+                <div class="card-body collapsible-body">
+                  <table align="center" class="card-text" style="font-size: 19px;">
+                    <tr>
+                        <td>Doctor Name:</td>
+                        <td>{{d.doc_name}}</td>
+                    </tr>
+                    <tr>
+                        <td>Patient Name:</td>
+                        <td>{{d.p_name}}</td>
+                    </tr>
+                    <tr>
+                      <td>Patient Phone:</td>
+                      <td>{{d.p_phone}}</td>
+                    </tr>
+                    <tr>
+                      <td>Patient email:</td>
+                      <td>{{d.p_email}}</td>
+                    </tr>
+                    <tr>
+                        <td>Appointment Date:</td>
+                        <td>{{d.booking_date}}</td>
+                    </tr>
+                    <tr>
+                        <td>Token :</td>
+                        <td>{{d.p_token}}</td>
+                    </tr>
+                  
+                </table>
+                </div>
+              </div>
+              {%endfor%}
+            </div>
+           
+          </div> 
+        </div>
+        <h3 class="text-center text-success">Coming Appointments
+          <!--<button class="btn btn-link"  data-toggle="collapse"  data-target="#collapse2"role="button" aria-expanded="false" aria-controls="collapse2">
+            <i class="fa fa-bars">Coming Appointments</i>
+          </button>-->
+        </h3>
+        <div class="text-center" role="tablist" id="accordion-2">
+          <div id="accordion">
+            <div class="card">
+              {%for d in coming_booking_datails %}
+                <div class="card-header collapsible-header" id="collapse2">
+                  <h5 style="color:blue;">
+                    <button class="btn btn-link" data-toggle="collapse" data-target="#collapseTwo"  role="button" aria-expanded="false" aria-controls="collapseOne">
+                      <i class="fa fa-calendar-check-o"></i>{{d.p_name}} have appointment with {{d.doc_name}} 
+                    </button></h5>
+                </div>
+            
+                <div id="collapseTwo" class="collapse" aria-labelledby="collapse2" data-parent="#accordion">
+                  <div class="card-body collapsible-body">
+                    <table align="center" class="card-text" style="font-size: 19px;">
+                      <tr>
+                          <td>Doctor Name:</td>
+                          <td>{{d.doc_name}}</td>
+                      </tr>
+                      <tr>
+                          <td>Patient Name:</td>
+                          <td>{{d.p_name}}</td>
+                      </tr>
+                      <tr>
+                        <td>Patient Phone:</td>
+                        <td>{{d.p_phone}}</td>
+                      </tr>
+                      <tr>
+                        <td>Patient email:</td>
+                        <td>{{d.p_email}}</td>
+                      </tr>
+                      <tr>
+                          <td>Appointment Date:</td>
+                          <td>{{d.booking_date}}</td>
+                      </tr>
+                      <tr>
+                          <td>Token :</td>
+                          <td>{{d.p_token}}</td>
+                      </tr>
+                    
+                  </table>
+                  </div>
+                </div>
+              {%endfor%}
+            </div>  
+          </div> 
+        </div>
+        <h3 class="text-center text-success">Previous Appointments
+          <!--<button class="btn btn-link"  data-toggle="collapse"  data-target="#collapse3"role="button" aria-expanded="false" aria-controls="collapse3">
+            <i class="fa fa-bars">Previous Appointments</i>
+          </button>-->
+        </h3>
+        <div class="text-center" id="accordion-3">
+          <div id="accordion">
+            <div class="card">
+              {%for d in prev_booking_datails %}
+              <div class="card-header collapsible-header" id="collapse3">
+                <h5 style="color:blue;">
+                  <button class="btn btn-link" data-toggle="collapse" data-target="#collapseThree"  role="button" aria-expanded="false" aria-controls="collapseOne">
+                    <i class="fa fa-calendar-check-o"></i>{{d.p_name}} had appointment with {{d.doc_name}} 
+                  </button></h5>
+              </div>
+          
+              <div id="collapseThree" class="collapse" aria-labelledby="collapse3" data-parent="#accordion">
+                <div class="card-body collapsible-body">
+                  <table align="center" class="card-text" style="font-size: 19px;">
+                    <tr>
+                        <td>Doctor Name:</td>
+                        <td>{{d.doc_name}}</td>
+                    </tr>
+                    <tr>
+                        <td>Patient Name:</td>
+                        <td>{{d.p_name}}</td>
+                    </tr>
+                    <tr>
+                      <td>Patient Phone:</td>
+                      <td>{{d.p_phone}}</td>
+                    </tr>
+                    <tr>
+                      <td>Patient email:</td>
+                      <td>{{d.p_email}}</td>
+                    </tr>
+                    <tr>
+                        <td>Appointment Date:</td>
+                        <td>{{d.booking_date}}</td>
+                    </tr>
+                    <tr>
+                        <td>Token :</td>
+                        <td>{{d.p_token}}</td>
+                    </tr>
+                  
+                </table>
+                </div>
+              </div>
+              {%endfor%}
+            </div>
+          </div> 
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>  
+
+{%endblock%}
