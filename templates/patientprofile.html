@@ -30,6 +30,129 @@
       <div class="col-md-6 text-center">
         <div class="form_container contact-form ">
             <form action="" method="">
+            
+                <div class="form-row"> 
+                                
+                  <div class="col-lg-8">
+                    <div class="form-row form-group">
+                      <div class="col-lg-12">
+                          <label class="text-danger" >Name </label>
+                      </div>
+                      <div class="col-lg-7">
+                          <input class="form-control" type="name" readonly="" value="{{ p.p_name }}">
+                      </div>
+                    </div>
+                    <div class="form-row form-group">
+                      <div class="col-lg-12">
+                          <label class="text-danger" >Email </label>
+                      </div>
+                      <div class="col-lg-7">
+                          <input class="form-control" type="email" readonly="" value="{{ p.p_email }}">
+                      </div>
+                    </div> 
+                    <div class="form-row form-group">
+                      <div class="col-lg-12">
+                          <label class="text-danger" >Phone </label>
+                      </div>
+                      <div class="col-lg-7">
+                          <input class="form-control" type="text" readonly="" value="{{ p.p_phone }}">
+                      </div>
+                    </div>   
+                    <div class="form-row form-group">
+                      <div class="col-lg-12">
+                          <label class="text-danger" >Gender </label>
+                      </div>
+                      <div class="col-lg-7">
+                          <input class="form-control" type="text" readonly="" value="{{ p.gender }}">
+                      </div>
+                    </div>                      
+                   
+                  </div>
+                  <div class="col-lg-4">               
+                    <div class="form-row form-group">
+                      <div class="col-lg-12">
+                          <label class="text-danger"style="padding-left: 150px;  padding-right: 0px;" >Address</label>
+                      </div>
+                      <div class="col-lg-12">
+                          <input class="form-control" type="text" readonly="" value="{{ p.p_address }}">
+                      </div>
+                    </div>   
+                   <!-- <div class="form-row form-group">
+                      <div class="col-lg-12  ">
+                          <label class="text-danger" style="padding-left: 150px;  padding-right: 0px;" >Department</label>
+                      </div>
+                      <div class="col-lg-12">
+                          <input class="form-control" type="text" readonly="" value="{{ p.dept_name }}">
+                      </div>
+                    </div>  --> 
+                    <div class="form-row form-group">
+                      <div class="col-lg-12">
+                          <label class="text-danger" style="padding-left: 150px;  padding-right: 0px;" >Specialization </label>
+                      </div>
+                      <div class="col-lg-12">
+                          <input class="form-control" type="text" readonly="" value="{{ p.birthdate }}">
+                      </div>
+                    </div>   
+                    <div class="form-row form-group">
+                      <div class="col-lg-12">
+                          <label class="text-danger" style="padding-left: 150px;  padding-right: 0px;" >Blood </label>
+                      </div>
+                      <div class="col-lg-12">
+                          <input class="form-control" type="text" readonly="" value="{{ p.blood }}">
+                      </div>
+                    </div>   
+                  </div>
+                    <!--<div class="form-row form-group">
+                      <div class="col-lg-12"> 
+                        <div class="col-md-6" style="padding-left: 270px;  padding-right: 0px;">
+                          <div  class="text-center">    
+                              <img src="{{p.doc_image.url}}" alt="">
+                          </div>  
+                        </div> 
+                      </div>
+                    </div>  -->
+                </div>
+                
+              
+                
+              </form>              
+        </div>
+      </div>
+     
+    </div>
+    {%endfor%}
+  </div>
+ 
+</section>
+
+
+<!--<section class="booking_section layout_padding">  
+  <div class="container">
+    {%for p in patient_details%}
+    <div class="heading_container">
+      <div class="row">
+        <div class="col-lg-12 text-center text-danger text-capitalise">
+                      
+            {% for m in messages%}
+              {{m}}
+            {%endfor %}                 
+          
+        </div>
+      </div>
+      
+        <div class="row">
+            
+            <div class="col-lg-12 text-center">
+            <h2>
+                {{p.p_name}}'s Profile
+            </h2>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+      <div class="col-md-6 text-center">
+        <div class="form_container contact-form ">
+            <form action="" method="">
                 
                 <div class="form-row">
                   <div class="col-lg-6">
@@ -79,7 +202,7 @@
     {%endfor%}
   </div>
  
-</section>
+</section>-->
 
 
 

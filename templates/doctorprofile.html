@@ -30,45 +30,87 @@
       <div class="col-md-6 text-center">
         <div class="form_container contact-form ">
             <form action="" method="">
-                
+            
                 <div class="form-row"> 
-                                  
-                  <div class="col-lg-6">                    
-                    <div>
-                      <input type="text" value={{p.doc_name}} name="name"  readonly/>                      
+                                
+                  <div class="col-lg-8">
+                    <div class="form-row form-group">
+                      <div class="col-lg-12">
+                          <label class="text-danger" >Name </label>
+                      </div>
+                      <div class="col-lg-7">
+                          <input class="form-control" type="name" readonly="" value="{{ p.doc_name }}">
+                      </div>
                     </div>
-                    
-                    <div>
-                        <input type="text" value={{p.doc_phone}} name="phone" readonly/>                        
-                    </div>    
-                    <div>
-                        <input type="email" value={{p.doc_email}} name="email"  readonly/>
-                    </div>
-                    <div>
-                        <input type="text" value={{p.gender}} name="gender"  readonly/>
-                    </div>
+                    <div class="form-row form-group">
+                      <div class="col-lg-12">
+                          <label class="text-danger" >Email </label>
+                      </div>
+                      <div class="col-lg-7">
+                          <input class="form-control" type="email" readonly="" value="{{ p.doc_email }}">
+                      </div>
+                    </div> 
+                    <div class="form-row form-group">
+                      <div class="col-lg-12">
+                          <label class="text-danger" >Phone </label>
+                      </div>
+                      <div class="col-lg-7">
+                          <input class="form-control" type="text" readonly="" value="{{ p.doc_phone }}">
+                      </div>
+                    </div>   
+                    <div class="form-row form-group">
+                      <div class="col-lg-12">
+                          <label class="text-danger" >Gender </label>
+                      </div>
+                      <div class="col-lg-7">
+                          <input class="form-control" type="text" readonly="" value="{{ p.gender }}">
+                      </div>
+                    </div>                      
+                   
                   </div>
-                  <div class="col-lg-6">               
-                 
-                    <div>
-                        <input type="text" value={{p.doc_address}} name="address" readonly />                       
-                    </div>
-                    <div>
-                        <input type="text" value={{p.blood}} name="blood"  readonly/>
-                    </div>
-                    <div>
-                      <input type="text" value={{p.doc_spec}} name="doc_spec" readonly/>
-                    </div>
-                    <div>
-                        <input type="text" value={{p.dept_name}} name="dep_name"  readonly/>
-                    </div>
-                    <div class="col-md-6" style="padding-left: 0px;  padding-right: 0px;">
-                        <div  class="text-center">    
-                            <img src="{{p.doc_image.url}}" alt="">
-                        </div>  
+                  <div class="col-lg-4">               
+                    <div class="form-row form-group">
+                      <div class="col-lg-12">
+                          <label class="text-danger"style="padding-left: 150px;  padding-right: 0px;" >Address</label>
+                      </div>
+                      <div class="col-lg-12">
+                          <input class="form-control" type="text" readonly="" value="{{ p.doc_address }}">
+                      </div>
+                    </div>   
+                    <div class="form-row form-group">
+                      <div class="col-lg-12  ">
+                          <label class="text-danger" style="padding-left: 150px;  padding-right: 0px;" >Department</label>
+                      </div>
+                      <div class="col-lg-12">
+                          <input class="form-control" type="text" readonly="" value="{{ p.dept_name }}">
+                      </div>
+                    </div>   
+                    <div class="form-row form-group">
+                      <div class="col-lg-12">
+                          <label class="text-danger" style="padding-left: 150px;  padding-right: 0px;" >Specialization </label>
+                      </div>
+                      <div class="col-lg-12">
+                          <input class="form-control" type="text" readonly="" value="{{ p.doc_spec }}">
+                      </div>
+                    </div>   
+                    <div class="form-row form-group">
+                      <div class="col-lg-12">
+                          <label class="text-danger" style="padding-left: 150px;  padding-right: 0px;" >Blood </label>
+                      </div>
+                      <div class="col-lg-12">
+                          <input class="form-control" type="text" readonly="" value="{{ p.blood }}">
+                      </div>
+                    </div>   
+                                  </div>
+                    <div class="form-row form-group">
+                      <div class="col-lg-12"> 
+                        <div class="col-md-6" style="padding-left: 270px;  padding-right: 0px;">
+                          <div  class="text-center">    
+                              <img src="{{p.doc_image.url}}" alt="">
+                          </div>  
+                        </div> 
+                      </div>
                     </div>  
-                    </div>
-                       
                 </div>
                 
               
